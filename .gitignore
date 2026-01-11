@@ -1,2 +1,53 @@
+# ===============================
+# Java / Maven
+# ===============================
 target/
-.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# ===============================
+# VS Code
+# ===============================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# ===============================
+# Sistema Operacional
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# IDEs (caso abra em outra)
+# ===============================
+.idea/
+*.iml
+
+# ===============================
+# Payara / GlassFish
+# ===============================
+glassfish/
+payara/
+domain1/
+domains/
+
+# ===============================
+# Banco / Config sensível
+# ===============================
+*.env
+.env
+application.properties
+config.properties
+
+# ===============================
+# Testes / Relatórios
+# ===============================
+surefire-reports/
+failsafe-reports/
