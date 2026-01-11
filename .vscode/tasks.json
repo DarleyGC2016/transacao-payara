@@ -24,6 +24,12 @@
 			"type": "shell",
 			"command": "mvn install fish.payara.maven.plugins:payara-micro-maven-plugin:bundle",
 			"group": "build"
+		},
+		{
+			"label": "payara-micro-reload",
+			"type": "shell",
+			"command": "mvn resources:resources compiler:compile war:exploded fish.payara.maven.plugins:payara-micro-maven-plugin:reload",
+			"group": "build"
 		}
 	]
 }

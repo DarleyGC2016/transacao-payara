@@ -6,6 +6,7 @@ import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
 import org.eclipse.microprofile.openapi.annotations.info.Contact;
 import org.eclipse.microprofile.openapi.annotations.info.Info;
 
+import jakarta.annotation.sql.DataSourceDefinition;
 import jakarta.ws.rs.ApplicationPath;
 
 @OpenAPIDefinition(
@@ -17,7 +18,19 @@ import jakarta.ws.rs.ApplicationPath;
          email = "garciacardoso.darley@gmail.com")
          )
      )
+     @DataSourceDefinition(
+    name = "jdbc/postgres_ds",
+    className = "org.postgresql.ds.PGSimpleDataSource", 
+    portNumber = 5432,
+    serverName = "localhost",   
+    databaseName = "transacao_db",
+    user = "postgres",
+    password = "sqlp_890a"
+     )
 @ApplicationPath("/rest")
 public class TransacaoApplication extends Application {
     // CORS configurado via CORSFilter
+    public static void main(String[] args) {
+        
+    }
 }
